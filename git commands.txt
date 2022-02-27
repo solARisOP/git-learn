@@ -1,0 +1,125 @@
+*****************below used <> is for mentioning only, it should not be included in the command line******************
+
+name
+   ->view - git config user.name
+   ->change - git config --global user.name "required name"
+
+email
+   ->view - git config user.email
+   ->change - git config --global user.email "required email-id"
+
+-> cd <directory name> (changing directory)
+
+-> pwd (present working dirctory)
+
+-> git init (initialising an empty git repository)
+
+-> git status (getting status of the files) 
+
+-> git add --a (or) git add . (adding all files to staging area)
+
+-> git add <filename> (adding particular file to staging area) 
+
+-> git commit -m "<required comment>" (commiting the files which are in the staging area)
+
+-> git log (showing previous commits)
+
+-> ls (listing all files in that directory)
+
+-> git clone <url> (clonning any repository with its url)
+
+-> rm -rf .git (deleting the git repository wipping all the commited data)
+
+-> touch <filename> (we can generate a file from it)
+
+-> touch .gitignore 
+	 .gitignore(only works for untrack files inside it) 
+   =>To ignore some files to track in git repository
+ 	> Create text file named ".gitignore" using command (if not exist): touch .gitignore
+ 	> Add the name of the file to be ignore in .gitignore file
+
+   =>To ignore every file based on extension
+ 	> Write *.<extension> in the .gitignore file
+	example : if we want to ignore all files having .log extension
+	open .gitignore file and add " *.log " in that file.  
+
+   =>To ignore folder inside git repository
+	> Write <foldername>/ in the .gitignore file
+	example : if we want to ignore all folder named "dir" inside git repository
+	open .gitignore  file and add " dir/ " in that file.
+
+   =>To ignore outer folder inside git repository
+      	> Write /<foldername>/ in the .gitignore file
+	example : if we want to ignore outer folder named "dir" inside git repository
+	open .gitignore  file and add " /dir/ " in that file.
+
+-> git diff (it tells the difference between our file which is in our staging area
+	     and modified area(working directory))
+
+-> git diff --staged (it tells the difference between our files which is 
+		      in our staging area and previously commited)
+
+-> git commit -a -m "<comment>" (it directly commits our modified tracked files by skipping out 
+				     staging area for them it doesn't do for untracked files)
+
+-> git rm <filename> (deletes the file from your directory and changes are staged to commit)
+
+-> git mv <filename> <new filename> (this changes the name of your file and changes are staged to commit)
+
+-> git rm --cached <filename> (this will untrack the file)
+
+-> git log -p (shows the changes made in all previous commits)
+
+-> git log -p -<n> (this shows the changes made in the last n commits)
+
+-> git log --stat (this shows no. of insertions and deletions made and files changed(a short summary) in all the previous commits)
+
+-> git log --pretty=oneline (this shows every previous commit in one line)
+
+-> git log --pretty=short (this shows every previous commit in short)
+
+-> git log --pretty=full (this shows the commiter info along with the info
+			  shown in the above command)
+
+-> git log --since=<n>.<duration> (where n is number and duration can be month, year, days anything)
+
+-> git log --pretty=format:"<> <> <>" (where the first and third input are place holders avaliable in git scm website and 
+				       second input is the symbol u wanna put between them you can put any no. of inputs u want)
+
+-> git commit --amend (this is to add a change in the last commit)
+
+-> git restore --staged <filename> (to unstage a staged file)
+
+-> git checkout -- <filename> (or) git restore <filename> (reverts the file to previous commited version)
+
+-> git checkout -f (reverts the whole directory to previous commited version)
+
+-> git remote add <name> <url> (for adding a remote git repository we wanna pull and push in, name is our wish)
+
+-> git remote -v (shows the urls in which and from we wanna push and pull)
+
+-> git push -u <url name> <name of branch> (for pushing into remote git repository)
+
+-> git config --global alias.<new command> <original command> (change the command name)
+
+-> git checkout -b <branch name> (this makes a new branch)
+
+-> git checkout <branch name> (this is used to switch between branches)
+ 
+-> git merge <branch name> (this merges the mentioned branch into present branch)
+
+-> git branch -v (gives all branches with there last commits)
+
+-> git branch --merged (shows all merged branches)
+
+-> git branch --no-merged (shows all non merged branches)
+
+-> git branch -d <branch name> (gives error if the branch is not merged else if it is, than directly deletes)
+
+-> git branch -D <branch name> (directly deletes a branch)
+
+-> git push <url name> <branch name> (this is for pushing madeup branches in remote repositories)
+
+-> git push <url name> <branch name>:<new name> (this is for pushing madeup branches in remote repositories by new name)
+
+-> git push -d <url name> <branch name> (this is for deleting a branch in remote git repository) 
